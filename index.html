@@ -1,0 +1,72 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation Position Example</title>
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Set an event to wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is loaded and Ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // Display `Position` properties from the geolocation
+    //
+    function onSuccess(position) {
+        var div = document.getElementById('myDiv');
+
+        div.innerHTML = 'Latitude: '             + position.coords.latitude  + '<br/>' +
+                        'Longitude: '            + position.coords.longitude + '<br/>' +
+                        'Altitude: '             + position.coords.altitude  + '<br/>' +
+                        'Accuracy: '             + position.coords.accuracy  + '<br/>' +
+                        'Altitude Accuracy: '    + position.coords.altitudeAccuracy  + '<br/>' +
+                        'Heading: '              + position.coords.heading   + '<br/>' +
+                        'Speed: '                + position.coords.speed     + '<br/>';
+    }
+
+    // Show an alert if there is a problem getting the geolocation
+    //
+    function onError() {
+        alert('onError!');
+    }
+
+    </script>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+  </body>
+=======
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Guide</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="jquery.mobile-1.1.1/jquery-1.7.1.min.js"></script>
+	<script src="jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Información Turistica</h1>
+	</div><!-- /header -->
+
+	<ul data-role="listview" data-inset="true" data-filter="true">
+	<li><a href="gps.html">Mi Posición</a></li>
+	<li><a href="near.html">¿Que hay cerca?</a></li>
+	<li><a href="hotel.html">Hotel</a></li>	
+    </ul>
+
+</div><!-- /page -->
+
+</body>
+>>>>>>> add index and jquery mobile
+</html>
